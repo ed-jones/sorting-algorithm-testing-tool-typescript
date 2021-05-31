@@ -1,1 +1,1 @@
-export { default, Efficiency, ICompare, IGenerate, TestType } from './SortingAlgorithmTester';
+export { default, Efficiency, ICompare, IGenerate, TestType, ISortingAlgorithm } from './SortingAlgorithmTester';
