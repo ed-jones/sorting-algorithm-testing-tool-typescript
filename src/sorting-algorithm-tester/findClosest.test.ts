@@ -1,6 +1,15 @@
 import findClosest from "./findClosest";
 
 describe('Testing Find Closest Function', () => {
+    test('Array of 1 numbers', () => {
+        expect(findClosest([1], 11)).toEqual(1);
+    });
+    test('Array of 2 numbers', () => {
+        expect(findClosest([1, 10], 5)).toEqual(1);
+    })
+    test('Array of 3 numbers', () => {
+        expect(findClosest([1, 10, 20], 11)).toEqual(10);
+    });
     test('Array of 4 numbers', () => {
         expect(findClosest([4, 6, 11, 16], 1)).toEqual(4);
         expect(findClosest([4, 6, 11, 16], 2)).toEqual(4);
@@ -19,11 +28,11 @@ describe('Testing Find Closest Function', () => {
         expect(findClosest([4, 6, 11, 16], 15)).toEqual(16);
         expect(findClosest([4, 6, 11, 16], 16)).toEqual(16);
     });
-    test('Array of 3 numbers', () => {
-        expect(findClosest([1, 10, 20], 11)).toEqual(10);
-    });
     test('Array of 5 numbers', () => {
         expect(findClosest([1, 10, 20, 30, 40], 11)).toEqual(10);
+    });
+    test('Test unsorted numbers', () => {
+        expect(findClosest([6, 100, 5, 33, 8], 11)).toEqual(8);
     });
     test('Test negative numbers', () => {
         expect(findClosest([4, 6, 11, 16], -1)).toEqual(4);
