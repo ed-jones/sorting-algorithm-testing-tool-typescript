@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn ts-node src/sorting-algorithms/sortingAlgorithmTests.ts",
-    "jest": "test"
+    "test": "jest"
   },
   "jest": {
     "transform": {}
