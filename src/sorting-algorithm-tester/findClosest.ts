@@ -1,4 +1,5 @@
 export default function findClosest(arr: number[], target: number) {
+    arr.sort((a, b) => a - b);
     const n = arr.length;
  
     // Corner cases
@@ -10,7 +11,7 @@ export default function findClosest(arr: number[], target: number) {
     // Doing binary search
     let i = 0, j = n, mid = 0;
     while (i < j) {
-        mid = (i + j) / 2;
+        mid = Math.floor((i + j) / 2);
 
         if (arr[mid] == target)
             return arr[mid];
