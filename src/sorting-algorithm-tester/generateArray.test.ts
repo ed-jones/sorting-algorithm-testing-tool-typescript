@@ -6,17 +6,25 @@ describe('Test Array Generator', () => {
         expect(generateArray(TestType.EMPTY, 100, (i) => i)).toStrictEqual([]);
     });
     test('Test presorted array', () => {
-        expect(generateArray(TestType.PRESORTED, 5, (i) => i)).toStrictEqual([0, 1, 2, 3, 4]);
+        const generatedArray = generateArray(TestType.PRESORTED, 5, (i) => i);
+        expect(generatedArray).toStrictEqual([0, 1, 2, 3, 4]);
     });
     test('Test reverse sorted array', () => {
-        expect(generateArray(TestType.REVERSE_SORTED, 5, (i) => i)).toStrictEqual([4, 3, 2, 1, 0]);
+        const generatedArray = generateArray(TestType.REVERSE_SORTED, 5, (i) => i);
+        expect(generatedArray).toStrictEqual([4, 3, 2, 1, 0]);
     });
     test('Test shuffled array', () => {
-        const originalArray = [0, 1, 2, 3, 4];
-        expect(generateArray(TestType.SHUFFLED, 5, (i) => i)).toEqual(expect.arrayContaining(originalArray));
+        const sortedArray = [0, 1, 2, 3, 4];
+        const generatedArray = generateArray(TestType.SHUFFLED, 5, (i) => i);
+        expect(generatedArray).toEqual(expect.arrayContaining(sortedArray));
+        expect(generatedArray).not.toContain(5);
+        expect(generatedArray).not.toContain(-1);
     });
     test('Test random array', () => {
-        const originalArray = [0, 1, 2, 3, 4];
-        expect(generateArray(TestType.RANDOM, 5, (i) => i)).not.toEqual(expect.arrayContaining(originalArray));
+        const sortedArray = [0, 1, 2, 3, 4];
+        const generatedArray = generateArray(TestType.RANDOM, 5, (i) => i);
+        expect(generatedArray).not.toEqual(sortedArray);
+        expect(generatedArray).not.toContain(5);
+        expect(generatedArray).not.toContain(-1);
     });
-})
+});

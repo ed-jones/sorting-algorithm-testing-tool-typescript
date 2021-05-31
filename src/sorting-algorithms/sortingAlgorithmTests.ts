@@ -1,5 +1,5 @@
 import SortingAlgorithmTester, { Efficiency, ICompare, IGenerate, TestType } from '../sorting-algorithm-tester';
-import SortingAlgorithms from '.';
+import SortingAlgorithms from './SortingAlgorithms';
 
 const generateRandomArrayLength = () => Math.floor(Math.random()*512);
 
@@ -24,7 +24,7 @@ numericBubbleTester.setEfficiency(Efficiency.N_SQUARED)
 numericBubbleTester.addTest(TestType.RANDOM, generateRandomArrayLength());
 numericBubbleTester.addTest(TestType.SHUFFLED, generateRandomArrayLength());
 numericBubbleTester.addTest(TestType.REVERSE_SORTED, generateRandomArrayLength());
-numericBubbleTester.setEfficiency(undefined)
+numericBubbleTester.setEfficiency();
 numericBubbleTester.addTest(TestType.PRESORTED, generateRandomArrayLength());
 numericBubbleTester.addTest(TestType.EMPTY, generateRandomArrayLength());
 numericBubbleTester.runTests();
@@ -36,7 +36,7 @@ numericHeapTester.addTest(TestType.RANDOM, generateRandomArrayLength());
 numericHeapTester.addTest(TestType.SHUFFLED, generateRandomArrayLength());
 numericHeapTester.addTest(TestType.REVERSE_SORTED, generateRandomArrayLength());
 numericHeapTester.addTest(TestType.PRESORTED, generateRandomArrayLength());
-numericHeapTester.setEfficiency(undefined);
+numericHeapTester.setEfficiency();
 numericHeapTester.addTest(TestType.EMPTY, generateRandomArrayLength());
 numericHeapTester.runTests();
 

@@ -6,6 +6,6 @@ This project is a tool that can be used to test the validity and efficiency of s
 
 - Install NodeJS
 - Install Yarn
-- Use Yarn to install dependencies
+- Use Yarn to install dependencies `yarn install`
 - Test testing tool `yarn jest`
 - Use testing tool on sorting algorithms `yarn test`
