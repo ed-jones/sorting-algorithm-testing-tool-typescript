@@ -1,1 +1,1 @@
-export { default } from './SortingAlgorithms';
+export { default } from "./SortingAlgorithms";
