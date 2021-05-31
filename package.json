@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "yarn ts-node src/sorting-algorithms/sortingAlgorithms.ts"
+    "test": "yarn ts-node src/sorting-algorithms/sortingAlgorithmTests.ts"
   },
   "jest": {
     "transform": {}
