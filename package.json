@@ -1,0 +1,24 @@
+{
+  "name": "sorting-algo-testing-tool-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn ts-node src/sorting-algorithms/sortingAlgorithms.test.ts"
+  },
+  "jest": {
+    "transform": {}
+  },
+  "dependencies": {
+    "@types/node": "^15.6.1",
+    "babel-jest": "^27.0.2",
+    "jest": "^27.0.3",
+    "ts-jest": "^27.0.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.4",
+    "@types/jest": "^26.0.23"
+  }
+}
