@@ -1,5 +1,6 @@
 import findClosest from "./findClosest";
 import generateArray from "./generateArray";
+import isSorted from "./isSorted";
 
 /**
  * Compare function that takes 2 arguments of type T and returns
@@ -99,7 +100,7 @@ export default class SortingAlgorithmTester<T> {
       });
 
       console.log("Test 2: Validating if list is sorted.");
-      printResult(this.checkSortedValidity(sortedList), () => {
+      printResult(isSorted(sortedList, this.compare), () => {
         console.log(`   Original list:`);
         console.log(`   ${unsortedList}`);
         console.log(`   Sorted list:`);
@@ -131,15 +132,6 @@ export default class SortingAlgorithmTester<T> {
         }
       }
     });
-  }
-
-  private checkSortedValidity(sortedList: T[]): boolean {
-    for (let i = 0; i < sortedList.length - 1; i++) {
-      if (this.compare(sortedList[i], sortedList[i + 1]) === 1) {
-        return false;
-      }
-    }
-    return true;
   }
 
   private getClosestEfficiency(
